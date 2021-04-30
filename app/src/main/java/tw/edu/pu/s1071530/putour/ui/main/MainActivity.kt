@@ -20,5 +20,9 @@ class MainActivity : AppCompatActivity() {
         this.mPUFlower = findViewById(R.id.imageButton_pu_flower)
         this.mPUCheckIn = findViewById(R.id.imageButton_check_in)
         this.mPULogout = findViewById(R.id.imageButton_logout)
+
+        mPULogout.setOnClickListener {
+            finish()
+        }
     }
 }
