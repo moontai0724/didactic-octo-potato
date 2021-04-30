@@ -1,9 +1,11 @@
 package tw.edu.pu.s1071530.putour.ui.main
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
+import androidx.appcompat.app.AppCompatActivity
 import tw.edu.pu.s1071530.putour.R
+import tw.edu.pu.s1071530.putour.ui.taichung_ibike.TaichungIbikeActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var mTaichungIBike: ImageButton
@@ -20,6 +22,11 @@ class MainActivity : AppCompatActivity() {
         this.mPUFlower = findViewById(R.id.imageButton_pu_flower)
         this.mPUCheckIn = findViewById(R.id.imageButton_check_in)
         this.mPULogout = findViewById(R.id.imageButton_logout)
+
+        mTaichungIBike.setOnClickListener {
+            val intent = Intent(this, TaichungIbikeActivity::class.java)
+            startActivity(intent)
+        }
 
         mPULogout.setOnClickListener {
             finish()
