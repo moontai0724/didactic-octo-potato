@@ -8,4 +8,10 @@
     <string name="action_clear">清除</string>
     <string name="login_failed">帳密有錯，請重新輸入</string>
     <string name="input_empty">請輸入此欄位</string>
+
+    <string name="title_taichung_ibike">台中市 iBike 站點</string>
+    <string name="title_pu_ibike">靜宜附近 iBike 站點</string>
+    <string name="title_pu_flower">靜宜附近賞花景點</string>
+    <string name="title_check_in">拍照打卡</string>
+    <string name="title_logout">登出系統</string>
 </resources>

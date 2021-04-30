@@ -1,6 +1,7 @@
 package tw.edu.pu.s1071530.putour.ui.login
 
 import android.app.Activity
+import android.content.Intent
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -14,6 +15,7 @@ import android.widget.EditText
 import android.widget.Toast
 
 import tw.edu.pu.s1071530.putour.R
+import tw.edu.pu.s1071530.putour.ui.main.MainActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -54,6 +56,8 @@ class LoginActivity : AppCompatActivity() {
                 return@Observer
             }
             setResult(Activity.RESULT_OK)
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         })
 
         username.afterTextChanged {
