@@ -2,8 +2,8 @@ package tw.edu.pu.s1071530.putour.ui.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import tw.edu.pu.s1071530.putour.data.LoginDataSource
-import tw.edu.pu.s1071530.putour.data.LoginRepository
+import tw.edu.pu.s1071530.putour.data.login.LoginDataSource
+import tw.edu.pu.s1071530.putour.data.login.LoginRepository
 
 /**
  * ViewModel provider factory to instantiate LoginViewModel.
@@ -16,7 +16,7 @@ class LoginViewModelFactory : ViewModelProvider.Factory {
         if (modelClass.isAssignableFrom(LoginViewModel::class.java)) {
             return LoginViewModel(
                     loginRepository = LoginRepository(
-                            dataSource = LoginDataSource()
+                        dataSource = LoginDataSource()
                     )
             ) as T
         }

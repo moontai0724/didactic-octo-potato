@@ -1,6 +1,6 @@
-package tw.edu.pu.s1071530.putour.data
+package tw.edu.pu.s1071530.putour.data.login
 
-import tw.edu.pu.s1071530.putour.data.model.User
+import tw.edu.pu.s1071530.putour.data.login.model.User
 
 class LoginRepository(val dataSource: LoginDataSource) {
     var user: User? = null

@@ -1,11 +1,10 @@
 package tw.edu.pu.s1071530.putour.ui.login
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import tw.edu.pu.s1071530.putour.data.LoginRepository
-import tw.edu.pu.s1071530.putour.data.Result
+import tw.edu.pu.s1071530.putour.data.login.LoginRepository
+import tw.edu.pu.s1071530.putour.data.login.Result
 
 import tw.edu.pu.s1071530.putour.R
 

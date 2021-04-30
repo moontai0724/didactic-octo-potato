@@ -1,4 +1,4 @@
-package tw.edu.pu.s1071530.putour.data.model
+package tw.edu.pu.s1071530.putour.data.login.model
 
 data class User(
     val account: String,

@@ -1,4 +1,4 @@
-package tw.edu.pu.s1071530.putour.data
+package tw.edu.pu.s1071530.putour.data.login
 
 /**
  * A generic class that holds a value with its loading status.
