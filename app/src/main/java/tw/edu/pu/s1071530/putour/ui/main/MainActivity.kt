@@ -1,35 +1,24 @@
 package tw.edu.pu.s1071530.putour.ui.main
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
 import tw.edu.pu.s1071530.putour.R
-import tw.edu.pu.s1071530.putour.ui.taichung_ibike.TaichungIbikeActivity
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var mTaichungIBike: ImageButton
-    private lateinit var mPUIBike: ImageButton
-    private lateinit var mPUFlower: ImageButton
-    private lateinit var mPUCheckIn: ImageButton
-    private lateinit var mPULogout: ImageButton
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        this.mTaichungIBike = findViewById(R.id.imageButton_taichung_ibike)
-        this.mPUIBike = findViewById(R.id.imageButton_pu_ibike)
-        this.mPUFlower = findViewById(R.id.imageButton_pu_flower)
-        this.mPUCheckIn = findViewById(R.id.imageButton_check_in)
-        this.mPULogout = findViewById(R.id.imageButton_logout)
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.fragment) as NavHostFragment
+        val navController: NavController = navHostFragment.navController
+        NavigationUI.setupActionBarWithNavController(this, navController)
+    }
 
-        mTaichungIBike.setOnClickListener {
-            val intent = Intent(this, TaichungIbikeActivity::class.java)
-            startActivity(intent)
-        }
-
-        mPULogout.setOnClickListener {
-            finish()
-        }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }
