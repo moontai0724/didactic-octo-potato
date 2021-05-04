@@ -49,6 +49,10 @@ class MainFragment : Fragment() {
             Navigation.findNavController(v).navigate(R.id.IBikeFragment, bundle)
         }
 
+        this.mPUFlower.setOnClickListener { v ->
+            Navigation.findNavController(v).navigate(R.id.flowerSpotsFragment)
+        }
+
         this.mPULogout.setOnClickListener {
             activity?.finish()
         }

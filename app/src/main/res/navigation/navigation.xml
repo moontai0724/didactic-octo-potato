@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_mainFragment_to_IBikeFragment"
             app:destination="@id/IBikeFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_flowerSpotsFragment"
+            app:destination="@id/flowerSpotsFragment" />
     </fragment>
     <fragment
         android:id="@+id/IBikeFragment"
@@ -24,5 +27,24 @@
             app:argType="string"
             app:nullable="true"
             android:defaultValue="ibike" />
+    </fragment>
+    <fragment
+        android:id="@+id/flowerSpotsFragment"
+        android:name="tw.edu.pu.s1071530.putour.ui.flower_spots.FlowerSpotsFragment"
+        android:label="@string/title_pu_flower"
+        tools:layout="@layout/flower_spots_fragment" >
+        <action
+            android:id="@+id/action_flowerSpotsFragment_to_flowerSpotDetailFragment"
+            app:destination="@id/flowerSpotDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/flowerSpotDetailFragment"
+        android:name="tw.edu.pu.s1071530.putour.ui.flower_spots.detail.FlowerSpotDetailFragment"
+        android:label="{title}"
+        tools:layout="@layout/flower_spot_detail_fragment" >
+        <argument
+            android:name="title"
+            app:argType="string"
+            app:nullable="true" />
     </fragment>
 </navigation>
