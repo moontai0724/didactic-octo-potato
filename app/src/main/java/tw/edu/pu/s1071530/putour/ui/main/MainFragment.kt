@@ -36,7 +36,17 @@ class MainFragment : Fragment() {
         this.mPULogout = view?.findViewById(R.id.imageButton_logout)!!
 
         this.mTaichungIBike.setOnClickListener { v ->
-            Navigation.findNavController(v).navigate(R.id.taichungIBikeFragment)
+            val bundle = Bundle()
+            bundle.putBoolean("showAll", true)
+            bundle.putString("title", getString(R.string.title_taichung_ibike))
+            Navigation.findNavController(v).navigate(R.id.IBikeFragment, bundle)
+        }
+
+        this.mPUIBike.setOnClickListener { v ->
+            val bundle = Bundle()
+            bundle.putBoolean("showAll", false)
+            bundle.putString("title", getString(R.string.title_pu_ibike))
+            Navigation.findNavController(v).navigate(R.id.IBikeFragment, bundle)
         }
 
         this.mPULogout.setOnClickListener {
