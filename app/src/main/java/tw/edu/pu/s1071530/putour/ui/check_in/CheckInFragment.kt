@@ -44,7 +44,7 @@ class CheckInFragment : Fragment() {
             mImageView.setImageBitmap(imageBitmap)
             Toast.makeText(context, "打卡成功！", Toast.LENGTH_LONG).show()
         } else {
-            Toast.makeText(context, "取消打卡？", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "取消拍照打卡", Toast.LENGTH_LONG).show()
         }
     }
 }
