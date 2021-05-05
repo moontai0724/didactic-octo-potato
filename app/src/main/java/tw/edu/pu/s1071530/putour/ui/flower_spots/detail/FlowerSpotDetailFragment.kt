@@ -4,12 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import tw.edu.pu.s1071530.putour.R
 import tw.edu.pu.s1071530.putour.data.flower_spots.Spot
 
 class FlowerSpotDetailFragment : Fragment() {
+    lateinit var mBack: Button
     lateinit var mArea: TextView
     lateinit var mName: TextView
     lateinit var mType: TextView
@@ -33,6 +35,9 @@ class FlowerSpotDetailFragment : Fragment() {
         mName = view?.findViewById(R.id.name)!!
         mType = view?.findViewById(R.id.type)!!
         mTime = view?.findViewById(R.id.time)!!
+        mBack = view?.findViewById(R.id.back)!!
+        mBack.setOnClickListener { activity?.onBackPressed() }
+
         val spot = arguments?.getParcelable<Spot>("spot")!!
 
         mArea.text = spot.area
