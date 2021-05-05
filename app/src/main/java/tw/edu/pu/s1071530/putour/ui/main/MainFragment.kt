@@ -53,6 +53,10 @@ class MainFragment : Fragment() {
             Navigation.findNavController(v).navigate(R.id.flowerSpotsFragment)
         }
 
+        this.mPUCheckIn.setOnClickListener { v ->
+            Navigation.findNavController(v).navigate(R.id.checkInFragment)
+        }
+
         this.mPULogout.setOnClickListener {
             activity?.finish()
         }

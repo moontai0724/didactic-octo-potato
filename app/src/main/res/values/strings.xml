@@ -14,4 +14,6 @@
     <string name="title_pu_flower">靜宜附近賞花景點</string>
     <string name="title_check_in">拍照打卡</string>
     <string name="title_logout">登出系統</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
